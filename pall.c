@@ -7,10 +7,10 @@
  *
  *Return: 0
  */
-void pall(stack_t **stack, unsigned int line_cnt)
+void pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *present = NULL;
-	line_cnt;
+	(void)line_number;
 
 	if (*stack)
 	{
