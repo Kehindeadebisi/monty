@@ -1,24 +1,24 @@
 #include "monty.h"
 
 /**
- *pall - prints the stack
- *@stack: stack given by main
- *@line_cnt: amount of lines
- *
- *Return: 0
+ * pall_opc - Print all the data from the stack
+ * @stack: Doubly linked list
+ * @line_number: Number of line
+ * Return: Nothing
  */
-void pall(stack_t **stack, unsigned int line_number)
+
+void pall_opc(stack_t **stack, unsigned int line_number)
 {
-	stack_t *present = NULL;
+	stack_t *tmp;
 	(void)line_number;
 
-	if (*stack)
+	tmp = *stack;
+
+	if (tmp == NULL)
+		return;
+
+	while (tmp->next != NULL)
 	{
-		present = *stack;
-		while (present != NULL)
-		{
-			printf("%d\n", present->n);
-			present = present->next;
-		}
-	}
-}
+		tmp = tmp->next;
+	};
+	
